@@ -11,3 +11,13 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
+#!/usr/bin/env bash
+# This script sends SIGTERM to the 7-highlander process
+
+# Find the PID(s) of 7-highlander
+pid=$(pgrep -f "7-highlander")
+
+# If the process exists, send SIGTERM
+if [ -n "$pid" ]; then
+    kill -TERM "$pid"
+fi
