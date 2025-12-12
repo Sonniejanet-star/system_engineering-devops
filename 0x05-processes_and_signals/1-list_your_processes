@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displays all running processes in a user-oriented format with hierarchy
+# This script displays all processes with UID, start time, and full command
 
-ps -e --forest -f
+ps -e -o uid,start,args
